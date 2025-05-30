@@ -53,6 +53,49 @@
 
 
 
+/* ACADEMIC SECITON */
+.academic-section {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+
+  margin-top: 70px;
+}
+
+.section-title {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.academic-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.logo-box img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-box img:hover {
+  transform: scale(1.1);
+}
+
+/* ACADEMIC SECITON */
+
+
+
+
+
+
+
 
 /* RESPONSIVENES >>>>>>>>>>> */
 /* medium device */
