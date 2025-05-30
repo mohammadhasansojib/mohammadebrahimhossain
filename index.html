@@ -17,15 +17,19 @@
         <div class="container">
             <div class="row">
                 <div class="logo">
-                    <h2>MD Hasan Sojib</h2>
+                    
+                    <h2>
+                        <img src="images/profile-pic.jpg" alt="Site Icon" class="site-icon" />
+                        Mohammad Ebrahim Hossain
+                    </h2>
                 </div>
                 <nav id="navbar">
                     <ul>
                         <li><a href="index.html" class="active">home</a></li>
                         <li><a href="about.html">about me</a></li>
-                        <li><a href="education.html">education</a></li>
-                        <li><a href="skills.html">skills</a></li>
-                        <li><a href="projects.html">projects</a></li>
+                        <li><a href="education.html">academic</a></li>
+                        <li><a href="skills.html">rolebook</a></li>
+                        <li><a href="projects.html">gallery</a></li>
                         <li><a href="contact.html">contact</a></li>
                     </ul>
                 </nav>
@@ -41,23 +45,70 @@
     
     <!-- Home page >>>>>> -->
      <main>
-        <section id="hero-sec">
-            <div class="container">
-                <div class="row">
-                    <div class="col-1">
-                        <h1 class="profession-title">frontend developer</h1>
-                        <p class="profession-description">Professionally i am an student and right now working as a frontend web developer. I make frontend by coding, not using any cms(content management system) right now.</p>
-                        <a href="contact.html" class="cta">get in touch</a>
-                    </div>
-                    <div class="col-2">
-                        <img src="images/profile-picture.jpg" alt="profile picture">
-                    </div>
-                </div>
+        <section class="fullscreen-section">
+            <div class="left-overlay"></div>
+            <div class="left-content">
+                <h1>WELCOME TO MY WORLD</h1>
+                <h2>Hi there, <span>I'm Mohammad Ebrahim Hossain</span></h2>
+                <p>I’m an ambitious and impact-driven communicator with a passion for storytelling, digital innovation, and social change. With a strong foundation in journalism, digital marketing, and organizational leadership, I’m on a mission to create, connect, and contribute. Let’s explore the journey of ideas, inspiration, and impact—together.</p>
             </div>
         </section>
+
      </main>
     <!-- Home page <<<<<< -->
 
+    <!-- STAT SECTION -->
+<section class="stats-section">
+  <div class="stats-container">
+    <div class="stat-item">
+      <div class="icon"><img src="images/icon-1.png" alt="Feature Stories"></div>
+      <div class="number" data-target="37">0</div>
+      <div class="label">Feature Stories Published</div>
+    </div>
+    <div class="stat-item">
+      <div class="icon"><img src="images/icon-2.png" alt="Events Volunteered"></div>
+      <div class="number" data-target="12">0</div>
+      <div class="label">Events Volunteered</div>
+    </div>
+    <div class="stat-item">
+      <div class="icon"><img src="images/icon-3.png" alt="Global Fellowship"></div>
+      <div class="number" data-target="3">0</div>
+      <div class="label">Global Fellowships</div>
+    </div>
+    <div class="stat-item">
+      <div class="icon"><img src="images/icon-4.png" alt="Social Impact"></div>
+      <div class="number" data-target="9">0</div>
+      <div class="label">Social Impact Initiatives</div>
+    </div>
+    <div class="stat-item">
+      <div class="icon"><img src="images/icon-5.png" alt="Skills Mastered"></div>
+      <div class="number" data-target="15">0</div>
+      <div class="label">Professional Skills Mastered</div>
+    </div>
+    <div class="stat-item">
+      <div class="icon"><img src="images/icon-6.png" alt="Cups of Tea"></div>
+      <div class="number" data-target="1000">0</div>
+      <div class="label">Cups of Tea</div>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- STAT SECTION -->
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about-me-single-column">
+  <div class="content">
+    <img src="images/profile-pic.jpg" alt="My photo" class="left-float-img">
+    <h2>About Me</h2>
+    <p>
+      Hi! I’m Mohammad Ebrahim Hossain — a passionate storyteller, digital strategist, and change-maker. With a strong academic background in Journalism and Media Communication and hands-on experience in digital marketing, content creation, and feature writing, I thrive at the intersection of communication, creativity, and social impact. I have worked with organizations like 10 Minute School, Newspaper Olympiad, and BabyTube, where I specialized in audience engagement, digital campaigns, and meaningful storytelling. Currently, I am a fellow at the Aspire Leaders Program (Harvard University - Aspire Institute), continuing my journey of personal and professional growth. I’m also leading youth-driven initiatives around climate change and social development, where I combine leadership, innovation, and purpose. I envision a future where words inspire action, brands connect with people, and ideas turn into movements.
+    </p>
+  </div>
+</section>
+    <!-- ABOUT SECTION -->
 
 
     <!-- FOOTER SECTION >>>>>>>>> -->
@@ -81,6 +132,31 @@
 
     <!-- JS FILE LINK -->
     <script src="js/main.js"></script>
+<script>
+  const counters = document.querySelectorAll(".number");
+  const duration = 2000; // total duration in ms
+  counters.forEach(counter => {
+    const target = +counter.getAttribute("data-target");
+    const increment = target / (duration / 16);
+
+    let count = 0;
+    const update = () => {
+      count += increment;
+      if (count < target) {
+        counter.innerText = Math.floor(count) + "+";
+        requestAnimationFrame(update);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+    update();
+  });
+</script>
+
+
+
+
+
 
 </body>
 </html>
